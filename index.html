@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Conheça os perfumes Bare Vanilla e Bare Vanilla Shimmer na Importados Lash. Faça seu pedido pelo WhatsApp.">
+  <meta name="description" content="Importados Lash: conheça Bare Vanilla e Bare Vanilla Shimmer. Faça seu pedido pelo WhatsApp.">
 
-  <title>Importados Lash | Beleza, autenticidade e você</title>
+  <title>Importados Lash | Perfumes Importados</title>
 
   <style>
     :root {
-      --pink: #f5a0b8;
-      --pink-soft: #fff0f3;
+      --pink: #f4a9bf;
+      --pink-light: #fff0f4;
       --wine: #883746;
-      --ink: #130f10;
+      --dark: #130f10;
       --cream: #fffaf8;
       --green: #08783f;
       --gold: #c6a05a;
@@ -42,94 +42,80 @@
     /* CABEÇALHO */
 
     .header {
-      background: #100d0e;
-      color: #fff;
-      min-height: 92px;
-      padding: 13px 5%;
+      background: var(--dark);
+      color: white;
+      padding: 18px 5%;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 13px;
       text-decoration: none;
-      min-width: 0;
     }
 
     .monogram {
-      font-family: Georgia, serif;
-      font-size: 48px;
-      font-weight: bold;
-      line-height: 1;
       color: var(--pink);
+      font-family: Georgia, serif;
+      font-size: 45px;
       border-right: 1px solid #73555c;
-      padding-right: 15px;
+      padding-right: 14px;
+      line-height: 1;
     }
 
     .brand-name {
-      font-family: Georgia, "Times New Roman", serif;
       color: var(--pink);
-      font-size: clamp(19px, 2.5vw, 29px);
+      font-family: Georgia, serif;
+      font-size: 25px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      line-height: 1.1;
+      line-height: 1.2;
     }
 
     .tagline {
-      font-size: 9px;
-      letter-spacing: 3px;
+      display: block;
       color: #f7e5e9;
-      margin-top: 7px;
+      font-size: 9px;
+      letter-spacing: 2px;
+      margin-top: 6px;
     }
 
     .nav {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 18px;
       flex-wrap: wrap;
     }
 
     .nav a {
       text-decoration: none;
-      font-size: 14px;
-      color: #fff;
+      color: white;
+      font-size: 13px;
     }
 
-    .nav a:hover,
-    .nav .nav-cta {
+    .nav a:hover {
       color: var(--pink);
-    }
-
-    .nav-cta {
-      border-left: 1px solid #6b5559;
-      padding-left: 18px;
     }
 
     /* BANNER PRINCIPAL */
 
     .hero {
-      height: clamp(300px, 34vw, 420px);
-      position: relative;
-      background: #5a292f;
+      height: 380px;
       overflow: hidden;
+      background: #5a292f;
     }
 
     .hero img {
       width: 100%;
       height: 100%;
+      display: block;
       object-fit: cover;
-      object-position: center 48%;
-      display: block;
-    }
-
-    .hero-link {
-      position: absolute;
-      inset: 0;
-      display: block;
+      object-position: center;
     }
 
     /* BENEFÍCIOS */
@@ -137,238 +123,210 @@
     .benefits {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      background: #fff0f2;
+      background: var(--pink-light);
       padding: 22px 4%;
       border-bottom: 1px solid #edc4ce;
     }
 
     .benefit {
       text-align: center;
-      padding: 5px 15px;
-      border-right: 1px solid #dcb2bb;
+      padding: 8px 12px;
+      border-right: 1px solid #e2b8c2;
     }
 
     .benefit:last-child {
       border-right: 0;
     }
 
-    .benefit .symbol {
-      font-size: 28px;
+    .benefit-icon {
       display: block;
-      line-height: 1.2;
-      margin-bottom: 7px;
+      font-size: 27px;
+      margin-bottom: 6px;
     }
 
     .benefit strong {
+      display: block;
       font-size: 12px;
       text-transform: uppercase;
-      display: block;
-      line-height: 1.3;
     }
 
     .benefit small {
-      font-size: 11px;
       display: block;
+      color: #66545a;
       margin-top: 5px;
-      color: #57484b;
+      font-size: 11px;
     }
 
     /* PRODUTOS */
 
     .section {
-      padding: 42px 2.5% 16px;
+      padding: 40px 3%;
     }
 
     .products {
+      max-width: 1250px;
+      margin: auto;
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-      max-width: 1400px;
-      margin: 0 auto;
+      gap: 20px;
     }
 
     .product {
-      border-radius: 12px;
       overflow: hidden;
-      min-width: 0;
+      border-radius: 13px;
       box-shadow: 0 5px 18px #4c23201c;
     }
 
-    .product.vanilla {
-      background: linear-gradient(
-        135deg,
-        #f6d1b4,
-        #fff0de 62%,
-        #f4c8a9
-      );
+    .vanilla {
+      background: linear-gradient(135deg, #f6d1b4, #fff0de, #f4c8a9);
     }
 
-    .product.shimmer {
-      background: linear-gradient(
-        135deg,
-        #f8c7d5,
-        #fff0f3 50%,
-        #eea0b7
-      );
+    .shimmer {
+      background: linear-gradient(135deg, #f8c7d5, #fff0f3, #eea0b7);
     }
 
     .product-top {
       display: grid;
-      grid-template-columns: 43% 57%;
-      min-height: 475px;
+      grid-template-columns: 42% 58%;
+      min-height: 420px;
     }
 
     .product-image {
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
       padding: 10px;
+      min-width: 0;
     }
 
     .product-image img {
+      display: block;
       width: 100%;
-      height: 100%;
-      max-height: 480px;
+      max-height: 420px;
       object-fit: contain;
       mix-blend-mode: multiply;
     }
 
     .product-details {
-      padding: 28px 22px 18px 8px;
+      padding: 25px 20px 18px 5px;
       display: flex;
       flex-direction: column;
     }
 
     .vs {
       font-family: Georgia, serif;
-      font-size: 18px;
+      font-size: 17px;
       text-align: center;
-      margin-bottom: 3px;
+      margin-bottom: 4px;
     }
 
     .product h2 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(28px, 3.4vw, 47px);
-      line-height: 1.02;
+      font-family: Georgia, serif;
+      font-size: clamp(27px, 3vw, 43px);
       font-weight: normal;
       font-style: italic;
+      line-height: 1.05;
       text-align: center;
       margin: 0 0 14px;
     }
 
-    .product.shimmer h2 {
-      font-size: clamp(25px, 3vw, 40px);
-    }
-
     .descriptor {
       text-align: center;
-      text-transform: uppercase;
       color: #74303a;
-      font-weight: bold;
-      letter-spacing: 1.4px;
       font-size: 10px;
-      margin-bottom: 17px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
     }
 
     .description {
       font-size: 13px;
-      line-height: 1.55;
+      line-height: 1.6;
       margin: 0 0 20px;
     }
 
     .pricebox {
       border-left: 3px solid #ee9eb3;
-      padding-left: 13px;
+      padding-left: 12px;
       margin-top: auto;
     }
 
     .price-label {
       font-size: 11px;
-      font-weight: bold;
       text-transform: uppercase;
+      font-weight: bold;
     }
 
     .price {
-      font-size: clamp(25px, 3vw, 36px);
+      font-size: clamp(25px, 3vw, 35px);
       font-weight: 800;
-      line-height: 1.2;
       white-space: nowrap;
+      line-height: 1.3;
     }
 
     .kit {
       background: #873b45;
       color: white;
       text-align: center;
-      border-radius: 0 0 13px 13px;
-      padding: 10px 7px;
-      margin-top: 15px;
+      padding: 10px 5px;
+      border-radius: 8px;
+      margin-top: 14px;
     }
 
-    .kit span {
-      font-size: 12px;
+    .kit span,
+    .kit small {
       display: block;
-      font-weight: bold;
-      letter-spacing: .5px;
+      font-size: 11px;
     }
 
     .kit strong {
       display: block;
-      font-size: clamp(24px, 2.6vw, 34px);
-      line-height: 1.25;
+      font-size: clamp(23px, 2.5vw, 32px);
       white-space: nowrap;
-    }
-
-    .kit small {
-      font-size: 11px;
     }
 
     .product-proof {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 14px;
-      padding: 9px 5px 13px;
+      gap: 12px;
+      padding: 12px 5px;
       font-size: 10px;
-      text-transform: uppercase;
       font-weight: bold;
+      text-transform: uppercase;
     }
 
     .proof-divider {
-      height: 30px;
+      height: 25px;
       width: 1px;
       background: #bd7d83;
     }
 
     .buy {
       display: block;
-      background: var(--green);
-      color: #fff;
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: bold;
-      text-align: center;
-      padding: 13px 10px;
+      margin: 0 8% 12px;
+      padding: 13px 8px;
       border-radius: 30px;
-      margin: 0 9% 18px;
-      transition: transform .2s, filter .2s;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 12px;
+      background: var(--green);
+      color: white;
+      transition: filter .2s;
     }
 
     .buy:hover {
-      filter: brightness(1.08);
-      transform: translateY(-1px);
+      filter: brightness(1.1);
     }
 
     /* BANNER PROMOCIONAL */
 
-    .promo {
-      margin: 18px 0 0;
-    }
-
     .promo img {
       display: block;
       width: 100%;
-      height: clamp(110px, 16vw, 180px);
+      height: 160px;
       object-fit: cover;
       object-position: center;
     }
@@ -376,34 +334,35 @@
     /* AVALIAÇÕES */
 
     .reviews {
+      background: var(--pink-light);
       padding: 55px 5%;
       text-align: center;
-      background: #fff0f3;
     }
 
     .reviews h2 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(28px, 4vw, 40px);
-      color: #883746;
+      color: var(--wine);
+      font-family: Georgia, serif;
+      font-size: clamp(27px, 4vw, 40px);
       margin: 0 0 10px;
     }
 
     .reviews-intro {
-      color: #6b5559;
+      max-width: 650px;
       margin: 0 auto 30px;
-      max-width: 600px;
+      color: #6b5559;
+      font-size: 15px;
     }
 
     .review-grid {
+      max-width: 1100px;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 20px;
-      max-width: 1100px;
-      margin: 0 auto;
     }
 
     .review-card {
-      background: #fff;
+      background: white;
       border: 1px solid #f0c6d8;
       border-radius: 15px;
       padding: 25px 20px;
@@ -411,47 +370,62 @@
     }
 
     .review-stars {
-      color: #c6a05a;
+      color: var(--gold);
       font-size: 27px;
       letter-spacing: 3px;
       margin-bottom: 12px;
     }
 
     .review-card h3 {
-      color: #883746;
+      color: var(--wine);
       font-size: 17px;
-      margin: 0 0 10px;
+      margin: 0 0 12px;
     }
 
     .review-card p {
       color: #6b5559;
       font-size: 14px;
+      line-height: 1.7;
       margin: 0;
     }
 
     .review-note {
-      margin: 25px auto 0;
-      font-size: 12px;
       color: #79686c;
+      font-size: 12px;
       max-width: 650px;
+      margin: 25px auto;
     }
 
-    /* RODAPÉ E ENDEREÇO */
+    .review-button {
+      display: inline-block;
+      background: #08783f;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      padding: 13px 24px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .review-button:hover {
+      filter: brightness(1.1);
+    }
+
+    /* RODAPÉ */
 
     .footer {
-      background: #100d0e;
-      color: #fff;
-      padding: 30px 5%;
+      background: var(--dark);
+      color: white;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      align-items: center;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 30px 5%;
       text-align: center;
-      gap: 22px;
     }
 
     .footer-block {
-      padding: 6px 18px;
       border-right: 1px solid #674d53;
+      padding: 10px;
     }
 
     .footer-block:last-child {
@@ -463,60 +437,60 @@
     }
 
     .footer .monogram {
-      font-size: 37px;
+      font-size: 35px;
     }
 
     .footer .brand-name {
-      font-size: 20px;
+      font-size: 18px;
     }
 
     .footer p {
       font-size: 12px;
-      margin: 5px 0;
-    }
-
-    .phone {
-      font-size: clamp(20px, 2.5vw, 28px) !important;
-      font-weight: bold;
-      color: #f4a9bf;
+      margin: 7px 0;
     }
 
     .footer a {
-      color: #f4a9bf;
+      color: var(--pink);
       text-decoration: none;
     }
 
+    .phone {
+      font-size: 23px !important;
+      font-weight: bold;
+    }
+
+    /* ENDEREÇO NO FINAL */
+
     .address {
       background: #1a1316;
-      color: #fff;
+      color: white;
       text-align: center;
-      padding: 35px 20px;
+      padding: 38px 20px;
       border-top: 1px solid #674d53;
     }
 
     .address h2 {
-      color: #f4a9bf;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 27px;
-      margin: 0 0 12px;
+      color: var(--pink);
+      font-family: Georgia, serif;
+      font-size: 28px;
+      margin: 0 0 14px;
     }
 
     .address p {
       line-height: 1.9;
-      margin: 8px 0 20px;
+      margin: 10px 0 22px;
       font-size: 15px;
     }
 
     .map-button {
       display: inline-block;
       background: #d94f91;
-      color: #fff !important;
+      color: white;
       text-decoration: none;
-      padding: 13px 23px;
+      padding: 13px 24px;
       border-radius: 30px;
       font-size: 14px;
       font-weight: bold;
-      transition: background .2s;
     }
 
     .map-button:hover {
@@ -524,62 +498,27 @@
     }
 
     .fineprint {
-      font-size: 10px;
+      background: var(--dark);
       color: #bdaeb1;
+      padding: 0 5% 20px;
       text-align: center;
-      background: #100d0e;
-      padding: 0 5% 18px;
+      font-size: 10px;
     }
 
-    /* AJUSTES PARA CELULAR E TABLET */
+    /* CELULARES */
 
-    @media (max-width: 850px) {
+    @media (max-width: 800px) {
       .header {
         justify-content: center;
         flex-direction: column;
-        padding: 16px 4%;
-        gap: 14px;
       }
 
       .nav {
         justify-content: center;
       }
 
-      .nav-cta {
-        padding-left: 12px;
-      }
-
-      .product-top {
-        grid-template-columns: 38% 62%;
-        min-height: 420px;
-      }
-
-      .product-details {
-        padding: 22px 15px 15px 5px;
-      }
-
-      .description {
-        font-size: 12px;
-      }
-
-      .benefit {
-        padding: 5px 8px;
-      }
-    }
-
-    @media (max-width: 620px) {
-      .hero {
-        height: 290px;
-      }
-
-      .hero img {
-        object-position: 52% center;
-      }
-
       .benefits {
         grid-template-columns: repeat(2, 1fr);
-        padding: 15px 3%;
-        gap: 12px 0;
       }
 
       .benefit:nth-child(2) {
@@ -588,37 +527,67 @@
 
       .benefit:nth-child(3),
       .benefit:nth-child(4) {
-        border-top: 1px solid #e5c1c8;
-        padding-top: 13px;
-      }
-
-      .section {
-        padding: 20px 3% 12px;
+        border-top: 1px solid #e2b8c2;
       }
 
       .products {
         grid-template-columns: 1fr;
-        gap: 17px;
       }
 
       .product-top {
-        grid-template-columns: 40% 60%;
-        min-height: 390px;
+        min-height: 400px;
       }
 
-      .product-image {
-        padding: 4px;
+      .review-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+
+      .footer-block {
+        border-right: 0;
+        border-bottom: 1px solid #674d53;
+      }
+
+      .footer-block:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        height: 260px;
+      }
+
+      .brand-name {
+        font-size: 20px;
+      }
+
+      .nav {
+        gap: 12px;
+      }
+
+      .nav a {
+        font-size: 12px;
+      }
+
+      .section {
+        padding: 22px 3%;
+      }
+
+      .product-top {
+        grid-template-columns: 38% 62%;
+        min-height: 370px;
       }
 
       .product-details {
-        padding: 21px 13px 12px 3px;
+        padding: 20px 12px 12px 3px;
       }
 
       .product h2 {
-        font-size: 34px;
-      }
-
-      .product.shimmer h2 {
         font-size: 29px;
       }
 
@@ -628,96 +597,33 @@
 
       .descriptor {
         font-size: 9px;
-        letter-spacing: .8px;
-        margin-bottom: 10px;
+        letter-spacing: .5px;
       }
 
       .description {
         font-size: 12px;
-        margin-bottom: 12px;
       }
 
       .price {
-        font-size: 29px;
+        font-size: 26px;
       }
 
       .kit strong {
-        font-size: 27px;
+        font-size: 24px;
       }
 
       .product-proof {
         font-size: 9px;
-        gap: 8px;
+        gap: 7px;
       }
 
       .buy {
-        margin-left: 7%;
-        margin-right: 7%;
-        font-size: 12px;
+        margin-left: 6%;
+        margin-right: 6%;
       }
 
-      .review-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-      }
-
-      .reviews {
-        padding: 40px 5%;
-      }
-
-      .footer {
-        grid-template-columns: 1fr;
-        gap: 7px;
-        padding: 24px 5%;
-      }
-
-      .footer-block {
-        border-right: 0;
-        border-bottom: 1px solid #674d53;
-        padding: 13px 5px;
-      }
-
-      .footer-block:last-child {
-        border-bottom: 0;
-      }
-    }
-
-    @media (max-width: 370px) {
-      .brand-name {
-        font-size: 17px;
-        letter-spacing: 1px;
-      }
-
-      .tagline {
-        letter-spacing: 1.5px;
-      }
-
-      .nav {
-        gap: 10px;
-      }
-
-      .nav a {
-        font-size: 12px;
-      }
-
-      .product-top {
-        grid-template-columns: 36% 64%;
-      }
-
-      .product h2 {
-        font-size: 29px;
-      }
-
-      .product.shimmer h2 {
-        font-size: 25px;
-      }
-
-      .price {
-        font-size: 25px;
-      }
-
-      .kit strong {
-        font-size: 23px;
+      .promo img {
+        height: 110px;
       }
     }
   </style>
@@ -733,26 +639,19 @@
 
       <span>
         <span class="brand-name">Importados Lash</span>
-        <span class="tagline" style="display:block">
-          BELEZA · AUTENTICIDADE · VOCÊ
-        </span>
+        <span class="tagline">BELEZA · AUTENTICIDADE · VOCÊ</span>
       </span>
     </a>
 
-    <nav class="nav" aria-label="Navegação">
+    <nav class="nav" aria-label="Navegação principal">
       <a href="#inicio">Início</a>
       <a href="#perfumes">Perfumes</a>
-      <a href="#sobre">Sobre Nós</a>
+      <a href="#sobre">Sobre nós</a>
       <a href="#avaliacoes">Avaliações</a>
       <a href="#contato">Contato</a>
-
-      <a
-        class="nav-cta"
-        href="https://wa.me/5549991865549"
-        target="_blank"
-        rel="noopener"
-      >
-        ◉ Compre pelo WhatsApp
+      <a href="https://wa.me/5549991865549"
+         target="_blank" rel="noopener">
+        Comprar pelo WhatsApp
       </a>
     </nav>
 
@@ -761,46 +660,38 @@
   <main>
 
     <!-- BANNER PRINCIPAL -->
-    <section class="hero" aria-label="Campanha Importados Lash">
-
+    <section class="hero" aria-label="Campanha da loja">
       <img
         src="assets/hero-importados-lash.jpg"
-        alt="Campanha de fragrâncias Bare Vanilla e Bare Vanilla Shimmer"
+        alt="Campanha Importados Lash"
       >
-
-      <a
-        class="hero-link"
-        href="#perfumes"
-        aria-label="Ver perfumes em destaque"
-      ></a>
-
     </section>
 
     <!-- BENEFÍCIOS -->
-    <section class="benefits" id="sobre" aria-label="Benefícios">
+    <section class="benefits" id="sobre">
 
       <div class="benefit">
-        <span class="symbol">✈</span>
-        <strong>Produtos importados dos EUA</strong>
+        <span class="benefit-icon">✈️</span>
+        <strong>Importados dos EUA</strong>
         <small>Fragrâncias importadas</small>
       </div>
 
       <div class="benefit">
-        <span class="symbol">♙</span>
-        <strong>Certificado de originalidade</strong>
-        <small>Consulte a documentação disponível</small>
+        <span class="benefit-icon">♙</span>
+        <strong>Originalidade</strong>
+        <small>Consulte as informações disponíveis</small>
       </div>
 
       <div class="benefit">
-        <span class="symbol">♡</span>
+        <span class="benefit-icon">♡</span>
         <strong>Atendimento personalizado</strong>
-        <small>Fale com a nossa loja</small>
+        <small>Fale diretamente com a loja</small>
       </div>
 
       <div class="benefit">
-        <span class="symbol">☏</span>
-        <strong>Compra pelo WhatsApp</strong>
-        <small>Pedido direto com a loja</small>
+        <span class="benefit-icon">☏</span>
+        <strong>Compre pelo WhatsApp</strong>
+        <small>Faça seu pedido online</small>
       </div>
 
     </section>
@@ -818,7 +709,7 @@
             <div class="product-image">
               <img
                 src="assets/bare-vanilla.jpg"
-                alt="Frasco Bare Vanilla"
+                alt="Produto Bare Vanilla"
               >
             </div>
 
@@ -833,8 +724,8 @@
               </div>
 
               <p class="description">
-                Uma fragrância clássica e irresistível, com notas doces
-                que deixam um rastro delicado e aconchegante.
+                Uma fragrância doce e aconchegante,
+                ideal para quem gosta de aromas envolventes.
               </p>
 
               <div class="pricebox">
@@ -845,35 +736,28 @@
               <div class="kit">
                 <span>KIT COM 3 UNIDADES</span>
                 <strong>R$ 149,90</strong>
-                <small>(R$ 49,97 cada)</small>
+                <small>R$ 49,97 por unidade</small>
               </div>
 
             </div>
-
           </div>
 
           <div class="product-proof">
             <span>🇺🇸 Importado dos EUA</span>
             <span class="proof-divider"></span>
-            <span>♙ Originalidade</span>
+            <span>♡ Consulte a originalidade</span>
           </div>
 
-          <a
-            class="buy"
-            target="_blank"
-            rel="noopener"
-            href="https://wa.me/5549991865549?text=Ol%C3%A1%21%20Quero%20comprar%20o%20Bare%20Vanilla%20por%20R%24%2059%2C90."
-          >
-            ◉ COMPRAR PELO WHATSAPP ›
+          <a class="buy"
+             href="https://wa.me/5549991865549?text=Ol%C3%A1!%20Quero%20comprar%20o%20Bare%20Vanilla%20por%20R%24%2059%2C90."
+             target="_blank" rel="noopener">
+            ☏ COMPRAR 1 UNIDADE — R$ 59,90
           </a>
 
-          <a
-            class="buy"
-            target="_blank"
-            rel="noopener"
-            href="https://wa.me/5549991865549?text=Ol%C3%A1%21%20Quero%20o%20kit%20com%203%20Bare%20Vanilla%20por%20R%24%20149%2C90."
-          >
-            Kit com 3 unidades
+          <a class="buy"
+             href="https://wa.me/5549991865549?text=Ol%C3%A1!%20Quero%20o%20kit%20com%203%20Bare%20Vanilla%20por%20R%24%20149%2C90."
+             target="_blank" rel="noopener">
+            COMPRAR KIT COM 3 — R$ 149,90
           </a>
 
         </article>
@@ -886,7 +770,7 @@
             <div class="product-image">
               <img
                 src="assets/bare-vanilla-shimmer.jpg"
-                alt="Frasco Bare Vanilla Shimmer"
+                alt="Produto Bare Vanilla Shimmer"
               >
             </div>
 
@@ -901,8 +785,8 @@
               </div>
 
               <p class="description">
-                A doçura envolvente do Bare Vanilla com um toque
-                cintilante para iluminar momentos especiais.
+                Uma versão cintilante da fragrância Bare Vanilla,
+                para quem procura um toque especial.
               </p>
 
               <div class="pricebox">
@@ -913,101 +797,99 @@
               <div class="kit">
                 <span>KIT COM 3 UNIDADES</span>
                 <strong>R$ 297,90</strong>
-                <small>(R$ 99,30 cada)</small>
+                <small>R$ 99,30 por unidade</small>
               </div>
 
             </div>
-
           </div>
 
           <div class="product-proof">
             <span>🇺🇸 Importado dos EUA</span>
             <span class="proof-divider"></span>
-            <span>♙ Originalidade</span>
+            <span>♡ Consulte a originalidade</span>
           </div>
 
-          <a
-            class="buy"
-            target="_blank"
-            rel="noopener"
-            href="https://wa.me/5549991865549?text=Ol%C3%A1%21%20Quero%20comprar%20o%20Bare%20Vanilla%20Shimmer%20por%20R%24%20129%2C90."
-          >
-            ◉ COMPRAR PELO WHATSAPP ›
+          <a class="buy"
+             href="https://wa.me/5549991865549?text=Ol%C3%A1!%20Quero%20comprar%20o%20Bare%20Vanilla%20Shimmer%20por%20R%24%20129%2C90."
+             target="_blank" rel="noopener">
+            ☏ COMPRAR 1 UNIDADE — R$ 129,90
           </a>
 
-          <a
-            class="buy"
-            target="_blank"
-            rel="noopener"
-            href="https://wa.me/5549991865549?text=Ol%C3%A1%21%20Quero%20o%20kit%20com%203%20Bare%20Vanilla%20Shimmer%20por%20R%24%20297%2C90."
-          >
-            Kit com 3 unidades
+          <a class="buy"
+             href="https://wa.me/5549991865549?text=Ol%C3%A1!%20Quero%20o%20kit%20com%203%20Bare%20Vanilla%20Shimmer%20por%20R%24%20297%2C90."
+             target="_blank" rel="noopener">
+            COMPRAR KIT COM 3 — R$ 297,90
           </a>
 
         </article>
 
       </div>
-
     </section>
 
     <!-- BANNER PROMOCIONAL -->
-    <section class="promo" aria-label="Mensagem da loja">
-
+    <section class="promo" aria-label="Banner promocional">
       <img
         src="assets/banner-promocional.jpg"
-        alt="Importados Lash — mais do que perfumes, uma experiência"
+        alt="Importados Lash: beleza e fragrâncias"
       >
-
     </section>
 
-    <!-- AVALIAÇÕES DOS CLIENTES -->
+    <!-- AVALIAÇÕES -->
     <section class="reviews" id="avaliacoes">
 
       <h2>O que nossas clientes dizem 💗</h2>
 
       <p class="reviews-intro">
         Sua opinião é muito importante para a Importados Lash!
-        Em breve, este espaço poderá mostrar as experiências
-        de quem já comprou conosco.
+        Confira abaixo exemplos de como as avaliações poderão aparecer.
       </p>
 
       <div class="review-grid">
 
+        <!-- EXEMPLO DE AVALIAÇÃO 1 -->
         <article class="review-card">
 
-          <div class="review-stars">☆ ☆ ☆ ☆ ☆</div>
+          <div class="review-stars" aria-label="Exemplo de cinco estrelas">
+            ★★★★★
+          </div>
 
-          <h3>Compartilhe sua experiência</h3>
+          <h3>Cliente satisfeita</h3>
 
           <p>
-            Este espaço está reservado para uma avaliação real
-            de uma cliente da Importados Lash.
+            "Adorei minha experiência com a Importados Lash!
+            Recomendo!"
           </p>
 
         </article>
 
+        <!-- EXEMPLO DE AVALIAÇÃO 2 -->
         <article class="review-card">
 
-          <div class="review-stars">☆ ☆ ☆ ☆ ☆</div>
+          <div class="review-stars" aria-label="Exemplo de cinco estrelas">
+            ★★★★★
+          </div>
 
-          <h3>Sua opinião importa!</h3>
+          <h3>Cliente satisfeita</h3>
 
           <p>
-            Aqui poderá aparecer o comentário de uma cliente
-            contando como foi sua experiência de compra.
+            "Produtos lindos e atendimento muito atencioso.
+            Foi ótimo comprar aqui!"
           </p>
 
         </article>
 
+        <!-- EXEMPLO DE AVALIAÇÃO 3 -->
         <article class="review-card">
 
-          <div class="review-stars">☆ ☆ ☆ ☆ ☆</div>
+          <div class="review-stars" aria-label="Exemplo de cinco estrelas">
+            ★★★★★
+          </div>
 
-          <h3>Conte como foi sua compra</h3>
+          <h3>Cliente satisfeita</h3>
 
           <p>
-            Queremos conhecer a experiência de nossas clientes
-            e compartilhar avaliações verdadeiras.
+            "Gostei muito dos produtos e da atenção recebida.
+            Quero comprar novamente!"
           </p>
 
         </article>
@@ -1015,9 +897,19 @@
       </div>
 
       <p class="review-note">
-        As avaliações acima são espaços reservados.
-        As estrelas não representam notas ou avaliações já recebidas.
+        Atenção: os três comentários e as estrelas acima são exemplos
+        ilustrativos, não avaliações reais. Substitua-os por depoimentos
+        verdadeiros de clientes antes de publicar como recomendações.
       </p>
+
+      <a
+        class="review-button"
+        href="https://wa.me/5549991865549?text=Ol%C3%A1!%20Quero%20enviar%20minha%20avalia%C3%A7%C3%A3o%20para%20a%20Importados%20Lash."
+        target="_blank"
+        rel="noopener"
+      >
+        💬 Envie sua avaliação pelo WhatsApp
+      </a>
 
     </section>
 
@@ -1031,17 +923,12 @@
       <div class="footer-block">
 
         <a class="brand" href="#inicio">
-
           <span class="monogram">IL</span>
 
           <span>
             <span class="brand-name">Importados Lash</span>
-
-            <span class="tagline" style="display:block">
-              BELEZA · AUTENTICIDADE · VOCÊ
-            </span>
+            <span class="tagline">BELEZA · AUTENTICIDADE · VOCÊ</span>
           </span>
-
         </a>
 
       </div>
@@ -1051,31 +938,23 @@
         <p>FAÇA SEU PEDIDO PELO WHATSAPP</p>
 
         <p class="phone">
-          <a
-            href="https://wa.me/5549991865549"
-            target="_blank"
-            rel="noopener"
-          >
+          <a href="https://wa.me/5549991865549"
+             target="_blank" rel="noopener">
             +55 49 99186-5549
           </a>
         </p>
 
-        <p>♡ Atendimento rápido e personalizado!</p>
+        <p>Atendimento personalizado ♡</p>
 
       </div>
 
       <div class="footer-block">
 
-        <p style="
-          font-family: Georgia, serif;
-          font-style: italic;
-          color: #f4a9bf;
-          font-size: 23px;
-        ">
+        <p style="color:#f4a9bf; font-family:Georgia,serif; font-size:22px;">
           Victoria's Secret
         </p>
 
-        <p>Uma escolha para cada momento ♡</p>
+        <p>Uma fragrância para cada momento.</p>
 
       </div>
 
@@ -1105,9 +984,10 @@
 
     <div class="fineprint">
       Importados Lash é uma loja independente e não representa
-      oficialmente a Victoria's Secret. Consulte a disponibilidade
-      dos produtos e as informações sobre autenticidade diretamente
-      com a loja.
+      oficialmente a Victoria's Secret.
+      <br>
+      Consulte a disponibilidade e as informações dos produtos
+      diretamente com a loja.
       <br><br>
       © 2026 Importados Lash — Todos os direitos reservados.
     </div>
