@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bare Vanilla e Bare Vanilla Shimmer na Importados Lash. Consulte os produtos e faça seu pedido pelo WhatsApp.">
+  <title>Importados Lash | Beleza, autenticidade e você</title>
+  <style>
+    :root{--pink:#f5a0b8;--pink-soft:#fff0f3;--wine:#883746;--ink:#130f10;--cream:#fffaf8;--green:#08783f;--gold:#c6a05a}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:#211719;font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+    a{color:inherit}
+    .header{background:#100d0e;color:#fff;min-height:92px;padding:13px 5%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:14px;text-decoration:none;min-width:0}
+    .monogram{font-family:Georgia,serif;font-size:48px;font-weight:bold;line-height:1;color:var(--pink);border-right:1px solid #73555c;padding-right:15px}
+    .brand-name{font-family:Georgia,'Times New Roman',serif;color:var(--pink);font-size:clamp(19px,2.5vw,29px);letter-spacing:2px;text-transform:uppercase;line-height:1.1}
+    .tagline{font-size:9px;letter-spacing:3px;color:#f7e5e9;margin-top:7px}
+    .nav{display:flex;align-items:center;gap:clamp(12px,2.6vw,34px);flex-wrap:wrap}
+    .nav a{text-decoration:none;font-size:14px;color:#fff}
+    .nav a:hover,.nav .nav-cta{color:var(--pink)}
+    .nav-cta{border-left:1px solid #6b5559;padding-left:22px}
+    .hero{height:clamp(300px,34vw,420px);position:relative;background:#5a292f;overflow:hidden}
+    .hero img{width:100%;height:100%;object-fit:cover;object-position:center 48%;display:block}
+    .hero-link{position:absolute;inset:0;display:block}
+    .benefits{display:grid;grid-template-columns:repeat(4,1fr);background:#fff0f2;padding:22px 4%;border-bottom:1px solid #edc4ce}
+    .benefit{text-align:center;padding:5px 15px;border-right:1px solid #dcb2bb}
+    .benefit:last-child{border-right:0}
+    .benefit .symbol{font-size:28px;display:block;line-height:1.2;margin-bottom:7px}
+    .benefit strong{font-size:12px;text-transform:uppercase;display:block;line-height:1.3}
+    .benefit small{font-size:11px;display:block;margin-top:5px;color:#57484b}
+    .section{padding:42px 2.5% 16px}
+    .products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:1400px;margin:0 auto}
+    .product{border-radius:12px;overflow:hidden;min-width:0;box-shadow:0 5px 18px #4c23201c}
+    .product.vanilla{background:linear-gradient(135deg,#f6d1b4,#fff0de 62%,#f4c8a9)}
+    .product.shimmer{background:linear-gradient(135deg,#f8c7d5,#fff0f3 50%,#eea0b7)}
+    .product-top{display:grid;grid-template-columns:43% 57%;min-height:475px}
+    .product-image{display:flex;align-items:center;justify-content:center;overflow:hidden;padding:10px}
+    .product-image img{width:100%;height:100%;max-height:480px;object-fit:contain;mix-blend-mode:multiply}
+    .product-details{padding:28px 22px 18px 8px;display:flex;flex-direction:column}
+    .vs{font-family:Georgia,serif;font-size:18px;text-align:center;margin-bottom:3px}
+    .product h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(28px,3.4vw,47px);line-height:1.02;font-weight:normal;font-style:italic;text-align:center;margin:0 0 14px}
+    .product.shimmer h2{font-size:clamp(25px,3vw,40px)}
+    .descriptor{text-align:center;text-transform:uppercase;color:#74303a;font-weight:bold;letter-spacing:1.4px;font-size:10px;margin-bottom:17px}
+    .description{font-size:13px;line-height:1.55;margin:0 0 20px}
+    .pricebox{border-left:3px solid #ee9eb3;padding-left:13px;margin-top:auto}
+    .price-label{font-size:11px;font-weight:bold;text-transform:uppercase}
+    .price{font-size:clamp(25px,3vw,36px);font-weight:800;line-height:1.2;white-space:nowrap}
+    .kit{background:#873b45;color:white;text-align:center;border-radius:0 0 13px 13px;padding:10px 7px;margin-top:15px}
+    .kit span{font-size:12px;display:block;font-weight:bold;letter-spacing:.5px}
+    .kit strong{display:block;font-size:clamp(24px,2.6vw,34px);line-height:1.25;white-space:nowrap}
+    .kit small{font-size:11px}
+    .product-proof{display:flex;justify-content:center;align-items:center;gap:14px;padding:9px 5px 13px;font-size:10px;text-transform:uppercase;font-weight:bold}
+    .proof-divider{height:30px;width:1px;background:#bd7d83}
+    .buy{display:block;background:var(--green);color:#fff;text-decoration:none;font-size:13px;font-weight:bold;text-align:center;padding:13px 10px;border-radius:30px;margin:0 9% 18px;box-shadow:0 4px 9px #44201920}
+    .buy:hover{filter:brightness(1.08);transform:translateY(-1px)}
+    .promo{margin:18px 0 0}
+    .promo img{display:block;width:100%;height:clamp(110px,16vw,180px);object-fit:cover;object-position:center}
+    .footer{background:#100d0e;color:#fff;padding:27px 5%;display:grid;grid-template-columns:1fr 1fr 1fr;align-items:center;text-align:center;gap:22px}
+    .footer-block{padding:6px 18px;border-right:1px solid #674d53}
+    .footer-block:last-child{border-right:0}
+    .footer .brand{justify-content:center}
+    .footer .monogram{font-size:37px}
+    .footer .brand-name{font-size:20px}
+    .footer p{font-size:12px;margin:5px 0}
+    .phone{font-size:clamp(20px,2.5vw,28px)!important;font-weight:bold;color:#f4a9bf}
+    .footer a{color:#f4a9bf;text-decoration:none}
+    .fineprint{font-size:10px;color:#bdaeb1;text-align:center;background:#100d0e;padding:0 5% 18px}
+    @media(max-width:850px){
+      .header{justify-content:center;flex-direction:column;padding:16px 4%;gap:14px}
+      .nav{justify-content:center}
+      .nav-cta{padding-left:12px}
+      .product-top{grid-template-columns:38% 62%;min-height:420px}
+      .product-details{padding:22px 15px 15px 5px}
+      .description{font-size:12px}
+      .benefit{padding:5px 8px}
+    }
+    @media(max-width:620px){
+      .hero{height:290px}
+      .hero img{object-position:52% center}
+      .benefits{grid-template-columns:repeat(2,1fr);padding:15px 3%;gap:12px 0}
+      .benefit:nth-child(2){border-right:0}
+      .benefit:nth-child(3){border-top:1px solid #e5c1c8;padding-top:13px}
+      .benefit:nth-child(4){border-top:1px solid #e5c1c8;padding-top:13px}
+      .section{padding:20px 3% 12px}
+      .products{grid-template-columns:1fr;gap:17px}
+      .product-top{grid-template-columns:40% 60%;min-height:390px}
+      .product-image{padding:4px}
+      .product-details{padding:21px 13px 12px 3px}
+      .product h2{font-size:34px}
+      .product.shimmer h2{font-size:29px}
+      .vs{font-size:14px}
+      .descriptor{font-size:9px;letter-spacing:.8px;margin-bottom:10px}
+      .description{font-size:12px;margin-bottom:12px}
+      .price{font-size:29px}
+      .kit strong{font-size:27px}
+      .product-proof{font-size:9px;gap:8px}
+      .buy{margin-left:7%;margin-right:7%;font-size:12px}
+      .footer{grid-template-columns:1fr;gap:7px;padding:24px 5%}
+      .footer-block{border-right:0;border-bottom:1px solid #674d53;padding:13px 5px}
+      .footer-block:last-child{border-bottom:0}
+    }
+    @media(max-width:370px){
+      .brand-name{font-size:17px;letter-spacing:1px}
+      .tagline{letter-spacing:1.5px}
+      .nav{gap:10px}
+      .nav a{font-size:12px}
+      .product-top{grid-template-columns:36% 64%}
+      .product h2{font-size:29px}
+      .product.shimmer h2{font-size:25px}
+      .price{font-size:25px}
+      .kit strong{font-size:23px}
+    }
+  </style>
+</head>
+<body>
+<header class="header" id="inicio">
+  <a class="brand" href="#inicio">
+    <span class="monogram">IL</span>
+    <span><span class="brand-name">Importados Lash</span><span class="tagline" style="display:block">BELEZA · AUTENTICIDADE · VOCÊ</span></span>
+  </a>
+  <nav class="nav" aria-label="Navegação">
+    <a href="#inicio">Início</a><a href="#perfumes">Perfumes</a><a href="#sobre">Sobre Nós</a><a href="#contato">Contato</a>
+    <a class="nav-cta" href="https://wa.me/5549991865549" target="_blank" rel="noopener">◉ Compre pelo WhatsApp</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" aria-label="Campanha Importados Lash">
+    <img src="assets/hero-importados-lash.jpg" alt="Campanha de fragrâncias Victoria's Secret Bare Vanilla e Bare Vanilla Shimmer">
+    <a class="hero-link" href="#perfumes" aria-label="Ver perfumes em destaque"></a>
+  </section>
+
+  <section class="benefits" id="sobre" aria-label="Benefícios">
+    <div class="benefit"><span class="symbol">✈</span><strong>Produtos importados dos EUA</strong><small>Fragrâncias importadas</small></div>
+    <div class="benefit"><span class="symbol">♙</span><strong>Certificado de originalidade</strong><small>Consulte a documentação disponível</small></div>
+    <div class="benefit"><span class="symbol">♧</span><strong>Atendimento personalizado</strong><small>Fale com a nossa loja</small></div>
+    <div class="benefit"><span class="symbol">♧</span><strong>Compra pelo WhatsApp</strong><small>Pedido direto com a loja</small></div>
+  </section>
+
+  <section class="section" id="perfumes">
+    <div class="products">
+      <article class="product vanilla">
+        <div class="product-top">
+          <div class="product-image"><img src="assets/bare-vanilla.jpg" alt="Frasco Bare Vanilla"></div>
+          <div class="product-details">
+            <div class="vs">Victoria's Secret</div>
+            <h2>Bare Vanilla</h2>
+            <div class="descriptor">Doce · Quente · Envolvente</div>
+            <p class="description">Uma fragrância clássica e irresistível, com notas doces que deixam um rastro delicado e aconchegante.</p>
+            <div class="pricebox"><div class="price-label">1 unidade</div><div class="price">R$ 59,90</div></div>
+            <div class="kit"><span>KIT COM 3 UNIDADES</span><strong>R$ 149,90</strong><small>(R$ 49,97 cada)</small></div>
+          </div>
+        </div>
+        <div class="product-proof"><span>🇺🇸 Importado dos EUA</span><span class="proof-divider"></span><span>♙ Originalidade</span></div>
+        <a class="buy" target="_blank" rel="noopener" href="https://wa.me/5549991865549?text=Ol%C3%A1%21%20Quero%20comprar%20o%20Bare%20Vanilla%20por%20R%24%2059%2C90.">◉ &nbsp; COMPRAR PELO WHATSAPP &nbsp; ›</a>
+        <a class="buy" target="_blank" rel="noopener" href="https://wa.me/5549991865549?text=Ol%C3%A1%21%20Quero%20o%20kit%20com%203%20Bare%20Vanilla%20por%20R%24%20149%2C90.">Kit com 3 unidades</a>
+      </article>
+
+      <article class="product shimmer">
+        <div class="product-top">
+          <div class="product-image"><img src="assets/bare-vanilla-shimmer.jpg" alt="Frasco Bare Vanilla Shimmer"></div>
+          <div class="product-details">
+            <div class="vs">Victoria's Secret</div>
+            <h2>Bare Vanilla<br>Shimmer</h2>
+            <div class="descriptor">Brilho · Doçura · Sofisticação</div>
+            <p class="description">A doçura envolvente do Bare Vanilla com um toque cintilante para iluminar momentos especiais.</p>
+            <div class="pricebox"><div class="price-label">1 unidade</div><div class="price">R$ 129,90</div></div>
+            <div class="kit"><span>KIT COM 3 UNIDADES</span><strong>R$ 297,90</strong><small>(R$ 99,30 cada)</small></div>
+          </div>
+        </div>
+        <div class="product-proof"><span>🇺🇸 Importado dos EUA</span><span class="proof-divider"></span><span>♙ Originalidade</span></div>
+        <a class="buy" target="_blank" rel="noopener" href="https://wa.me/5549991865549?text=Ol%C3%A1%21%20Quero%20comprar%20o%20Bare%20Vanilla%20Shimmer%20por%20R%24%20129%2C90.">◉ &nbsp; COMPRAR PELO WHATSAPP &nbsp; ›</a>
+        <a class="buy" target="_blank" rel="noopener" href="https://wa.me/5549991865549?text=Ol%C3%A1%21%20Quero%20o%20kit%20com%203%20Bare%20Vanilla%20Shimmer%20por%20R%24%20297%2C90.">Kit com 3 unidades</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="promo" aria-label="Mensagem da loja">
+    <img src="assets/banner-promocional.jpg" alt="Importados Lash — mais do que perfumes, uma experiência">
+  </section>
+</main>
+
+<footer id="contato" class="footer">
+  <div class="footer-block">
+    <a class="brand" href="#inicio"><span class="monogram">IL</span><span><span class="brand-name">Importados Lash</span><span class="tagline" style="display:block">BELEZA · AUTENTICIDADE · VOCÊ</span></span></a>
+  </div>
+  <div class="footer-block">
+    <p>FAÇA SEU PEDIDO PELO WHATSAPP</p>
+    <p class="phone"><a href="https://wa.me/5549991865549" target="_blank" rel="noopener">+55 49 99186-5549</a></p>
+    <p>♡ Atendimento rápido e personalizado!</p>
+  </div>
+  <div class="footer-block">
+    <p style="font-family:Georgia,serif;font-style:italic;color:#f4a9bf;font-size:23px">Victoria's Secret</p>
+    <p>Uma escolha para cada momento ♡</p>
+  </div>
+  <div class="fineprint">Importados Lash é uma loja independente e não representa oficialmente a Victoria's Secret. Confirme disponibilidade, entrega e documentação de autenticidade diretamente com a loja.</div>
+</footer>
+</body>
+</html>
